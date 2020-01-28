@@ -6,20 +6,17 @@ mask = Image.new('L', size, 0)
 draw = ImageDraw.Draw(mask) 
 draw.ellipse((0, 0) + size, fill=255)
 
-
-#draw the centre of the circle to include only the anterior 
-x, y, r = 391, 391, 321
+#draw the centre of the circle at where the fovea is (centre of the middle X) to indicate the points that we would pass 
+x, y, r = 478, 392, 18
 leftUpPoint = (x-r, y-r)
 rightDownPoint = (x+r, y+r)
 twoPointList = [leftUpPoint, rightDownPoint]
-draw.ellipse(twoPointList, fill='black')
- 
-# mask.show()
+draw.ellipse(twoPointList, fill='blue')
 
-#turn the white pixels transparent
+#Isolate the pixels above and check if they are yellow
 
 #crop
-bg_image = Image.open("background.png")
+bg_image = Image.open("../background.png")
 bg_image.putalpha(mask)
 bg_image_crop = bg_image.crop((0, 0, 781, 781))
 bg_image_crop.show()

@@ -15,9 +15,8 @@ draw.ellipse(twoPointList, fill='blue')
 
 #Isolate the pixels above and check if they are yellow
 
-
 #crop
-bg_image = Image.open("background.png")
+bg_image = Image.open("../background.png")
 bg_image.putalpha(mask)
 bg_image_crop = bg_image.crop((0, 0, 781, 781))
 bg_image_crop.show()
