@@ -14,7 +14,7 @@ rightDownPoint = (x+r, y+r)
 twoPointList = [leftUpPoint, rightDownPoint]
 draw.ellipse(twoPointList, fill='black')
  
-# mask.show()
+#calculate the perentage of which the anterior mask is covered 
 
 #turn the white pixels transparent
 

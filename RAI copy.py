@@ -34,7 +34,7 @@ black = (0, 0, 0, 255)
 
 #count yellow area 
 tumour = 0 
-img_obj = Image.open('./OS/1-ZB-Oct-18-2017.png')
+img_obj = Image.open('test2.png')
 for pixel in img_obj.getdata():
     if pixel != background and pixel != pink and pixel!= pink2 and pixel != white and pixel !=black: 
         tumour += 1 
